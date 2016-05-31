@@ -170,15 +170,16 @@
 # .. variable:: CPACK_DEBIAN_COMPRESSION_TYPE
 #
 #  The compression used for creating the Debian package.
+#
+#  * Mandatory : YES
+#  * Default   : "gzip"
+#
 #  Possible values are:
 #
 #  - lzma
 #  - xz
 #  - bzip2
 #  - gzip
-#
-#  * Mandatory : YES
-#  * Default   : "gzip"
 #
 # .. variable:: CPACK_DEBIAN_PACKAGE_PRIORITY
 #               CPACK_DEBIAN_<COMPONENT>_PACKAGE_PRIORITY
