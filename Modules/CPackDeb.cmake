@@ -31,6 +31,16 @@
 #
 # List of CPackRPM specific variables:
 #
+# .. variable:: CPACK_DEB_PACKAGE_COMPONENT
+#
+#  Enable component packaging for CPackRPM
+#
+#  * Mandatory : NO
+#  * Default   : OFF
+#
+#  If enabled (ON) multiple packages are generated. By default a single package
+#  containing files of all components is generated.
+#
 # .. variable:: CPACK_DEBIAN_PACKAGE_NAME
 #               CPACK_DEBIAN_<COMPONENT>_PACKAGE_NAME
 #

@@ -42,6 +42,16 @@
 #
 # List of CPackRPM specific variables:
 #
+# .. variable:: CPACK_RPM_PACKAGE_COMPONENT
+#
+#  Enable component packaging for CPackRPM
+#
+#  * Mandatory : NO
+#  * Default   : OFF
+#
+#  If enabled (ON) multiple packages are generated. By default a single package
+#  containing files of all components is generated.
+#
 # .. variable:: CPACK_RPM_PACKAGE_SUMMARY
 #               CPACK_RPM_<component>_PACKAGE_SUMMARY
 #
@@ -410,6 +420,7 @@
 #   cpack -D CPACK_RPM_PACKAGE_DEBUG=1 -G RPM
 #
 # .. variable:: CPACK_RPM_USER_BINARY_SPECFILE
+#               CPACK_RPM_<componentName>_USER_BINARY_SPECFILE
 #
 #  A user provided spec file.
 #
@@ -419,8 +430,6 @@
 #  May be set by the user in order to specify a USER binary spec file
 #  to be used by CPackRPM instead of generating the file.
 #  The specified file will be processed by configure_file( @ONLY).
-#  One can provide a component specific file by setting
-#  :variable:`CPACK_RPM_<componentName>_USER_BINARY_SPECFILE`.
 #
 # .. variable:: CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE
 #
@@ -449,7 +458,7 @@
 #  May be used to embed a pre (un)installation script in the spec file.
 #  The referred script file (or both) will be read and directly
 #  put after the ``%pre`` or ``%preun`` section
-#  If :variable:`CPACK_RPM_COMPONENT_INSTALL` is set to ON the (un)install
+#  If :variable:`CPACK_RPM_PACKAGE_COMPONENT` is set to ON the (un)install
 #  script for each component can be overridden with
 #  ``CPACK_RPM_<COMPONENT>_PRE_INSTALL_SCRIPT_FILE`` and
 #  ``CPACK_RPM_<COMPONENT>_PRE_UNINSTALL_SCRIPT_FILE``.
@@ -468,7 +477,7 @@
 #  May be used to embed a post (un)installation script in the spec file.
 #  The referred script file (or both) will be read and directly
 #  put after the ``%post`` or ``%postun`` section.
-#  If :variable:`CPACK_RPM_COMPONENT_INSTALL` is set to ON the (un)install
+#  If :variable:`CPACK_RPM_PACKAGE_COMPONENT` is set to ON the (un)install
 #  script for each component can be overridden with
 #  ``CPACK_RPM_<COMPONENT>_POST_INSTALL_SCRIPT_FILE`` and
 #  ``CPACK_RPM_<COMPONENT>_POST_UNINSTALL_SCRIPT_FILE``.
