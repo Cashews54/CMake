@@ -25,8 +25,9 @@
 #
 # Here are some CPackDeb wiki resources that are here for historic reasons and
 # are no longer maintained but may still prove useful:
-# https://cmake.org/Wiki/CMake:CPackConfiguration
-# https://cmake.org/Wiki/CMake:CPackPackageGenerators#DEB_.28UNIX_only.29
+#
+#  - https://cmake.org/Wiki/CMake:CPackConfiguration
+#  - https://cmake.org/Wiki/CMake:CPackPackageGenerators#DEB_.28UNIX_only.29
 #
 # List of CPackRPM specific variables:
 #
@@ -380,7 +381,7 @@
 #  * Default   : OFF
 #
 #  Allows to generate shlibs control file automatically. Compatibility is defined by
-#  CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY variable value.
+#  :variable:`CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY` variable value.
 #
 #  .. note::
 #
@@ -389,6 +390,8 @@
 #    :command:`set_target_properties` command.
 #
 # .. variable:: CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY
+#
+#  Compatibility policy for auto-generated shlibs control file.
 #
 #  * Mandatory : NO
 #  * Default   : "="

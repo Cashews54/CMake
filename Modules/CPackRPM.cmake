@@ -36,8 +36,9 @@
 #
 # Here are some CPackRPM wiki resources that are here for historic reasons and
 # are no longer maintained but may still prove useful:
-# https://cmake.org/Wiki/CMake:CPackConfiguration
-# https://cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29
+#
+#  - https://cmake.org/Wiki/CMake:CPackConfiguration
+#  - https://cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29
 #
 # List of CPackRPM specific variables:
 #
@@ -375,6 +376,8 @@
 #
 # .. variable:: CPACK_RPM_SPEC_INSTALL_POST
 #
+#  Deprecated - use :variable:`CPACK_RPM_POST_INSTALL_SCRIPT_FILE` instead.
+#
 #  * Mandatory : NO
 #  * Default   : -
 #  * Deprecated: YES
@@ -438,6 +441,8 @@
 # .. variable:: CPACK_RPM_PRE_INSTALL_SCRIPT_FILE
 #               CPACK_RPM_PRE_UNINSTALL_SCRIPT_FILE
 #
+#  Path to file containing pre (un)install script.
+#
 #  * Mandatory : NO
 #  * Default   : -
 #
@@ -454,6 +459,8 @@
 #
 # .. variable:: CPACK_RPM_POST_INSTALL_SCRIPT_FILE
 #               CPACK_RPM_POST_UNINSTALL_SCRIPT_FILE
+#
+#  Path to file containing post (un)install script.
 #
 #  * Mandatory : NO
 #  * Default   : -
@@ -520,6 +527,8 @@
 #
 # .. variable:: CPACK_RPM_RELOCATION_PATHS
 #
+#  Packages relocation paths list.
+#
 #  * Mandatory : NO
 #  * Default   : -
 #
@@ -541,14 +550,18 @@
 #
 # .. variable:: CPACK_RPM_<COMPONENT>_PACKAGE_PREFIX
 #
+#  Per component relocation path install prefix.
+#
 #  * Mandatory : NO
 #  * Default   : CPACK_PACKAGING_INSTALL_PREFIX
 #
-#  May be used to set per component CPACK_PACKAGING_INSTALL_PREFIX for
-#  relocatable RPM packages.
+#  May be used to set per component :variable:`CPACK_PACKAGING_INSTALL_PREFIX`
+#  for relocatable RPM packages.
 #
 # .. variable:: CPACK_RPM_NO_INSTALL_PREFIX_RELOCATION
 #               CPACK_RPM_NO_<COMPONENT>_INSTALL_PREFIX_RELOCATION
+#
+#  Removal of default install prefix from relocation paths list.
 #
 #  * Mandatory : NO
 #  * Default   : CPACK_PACKAGING_INSTALL_PREFIX or CPACK_RPM_<COMPONENT>_PACKAGE_PREFIX
